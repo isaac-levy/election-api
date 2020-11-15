@@ -18,7 +18,7 @@ exports.seatGetAll = (req, res, next) => {
                     return {
                         id: result.id,
                         name: result.name,
-                        province: result.region.name
+                        province: result.Region.name
                     }
                 })
             }
@@ -52,7 +52,7 @@ exports.seatGetOne = (req, res, next) => {
             const response = {
                 id: result.id,
                 name: result.name,
-                province: result.region.name
+                province: result.Region.name
             }
             res.status(200).json(response);
         } else {

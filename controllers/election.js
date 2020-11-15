@@ -16,7 +16,7 @@ exports.electionGetAll = (req, res, next) => {
                 elections: results.map(result => {
                     return {
                         id: result.id,
-                        region: result.region.name,
+                        region: result.Region.name,
                         type: result.voteType,
                         date: result.date
                     }
@@ -49,7 +49,7 @@ exports.electionGetOne = (req, res, next) => {
         if(result != null){
            const response = {
                 id: result.id,
-                region: result.region.name,
+                region: result.Region.name,
                 type: result.voteType,
                 date: result.date
             }

@@ -32,10 +32,10 @@ exports.resultGetAll = (req, res, next) => {
                 results: results.map(result => {
                     return {
                         id: result.id,
-                        seat: result.seat.name,
-                        province: result.seat.region.name,
-                        member: `${result.member.firstName} ${result.member.lastName}`,
-                        party: result.party.name,
+                        seat: result.Seat.name,
+                        province: result.Seat.Region.name,
+                        member: `${result.Member.firstName} ${result.Member.lastName}`,
+                        party: result.Party.name,
                         voteAbs: result.voteAbs,
                         votePct: result.votePct
                     }
@@ -84,10 +84,10 @@ exports.resultGetOne = (req, res, next) => {
         if (result != null){
             const response = {
                 id: result.id,
-                seat: result.seat.name,
-                province: result.seat.region.name,
-                member: `${result.member.firstName} ${result.member.lastName}`,
-                party: result.party.name,
+                seat: result.Seat.name,
+                province: result.Seat.region.name,
+                member: `${result.Member.firstName} ${result.Member.lastName}`,
+                party: result.Party.name,
                 voteAbs: result.voteAbs,
                 votePct: result.votePct
             }
