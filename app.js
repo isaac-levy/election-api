@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const sequelize = require("./config/database");
 
+const generalRoute = require("./routes/general");
 const electionRoutes = require("./routes/election");
 const memberRoutes = require("./routes/member");
 const partyRoutes = require("./routes/party");
@@ -33,6 +34,7 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use("/", generalRoute);
 app.use("/election", electionRoutes);
 app.use("/member", memberRoutes);
 app.use("/party", partyRoutes);
